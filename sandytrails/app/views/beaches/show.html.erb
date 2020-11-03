@@ -1,2 +1,9 @@
-<h1>Beaches#show</h1>
-<p>Find me in app/views/beaches/show.html.erb</p>
+<h1>Beach Deats</h1>
+
+<h3>Beach Name: <%=  @beach.name %></h3>
+<h3> Location: <%=  @beach.location %></h3>
+<h3> Is Open? <%=  @beach.open %> </h3>
+
+<%= link_to 'Back To Index', beaches_path%>
+<%= link_to 'Edit', edit_beach_path%>
+<%= link_to 'Delete This Beach', @beach_to_delete, method: 'delete'%>
