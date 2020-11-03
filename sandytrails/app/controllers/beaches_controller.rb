@@ -8,8 +8,14 @@ class BeachesController < ApplicationController
   end
 
   def create
-    beach = Beach.create(beach_params)
-    redirect_to beach_path(beach.id)
+    @beach = Beach.create(beach_params)
+    @beach = Beach.new
+    if @beach.valid? 
+      @beach.save
+      redirect_to beach_path(@beach.id)
+    else
+      render 'new'
+    end
   end
 
   def new

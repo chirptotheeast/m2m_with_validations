@@ -1,0 +1,17 @@
+<%= render partial: "/shared/error_list", locals: {new_object: @beach} %>
+
+
+<%= form_for @beach do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :location %>
+    <%= f.text_field :location%><br>
+
+    <%= f.label :open %>
+    <%= f.select :open, [true, false]%><br>
+
+    <%= f.submit %>
+    <%= link_to 'Take Me Back', beaches_path%>
+<% end%>
+
