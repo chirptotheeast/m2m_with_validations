@@ -1943,3 +1943,368 @@ ActionView::Template::Error (Missing partial shared/_error_list with {:locale=>[
   
 app/views/beaches/_beach_form.html.erb:1
 app/views/beaches/new.html.erb:3
+Started GET "/beaches" for ::1 at 2020-11-03 16:47:19 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BeachesController#index as HTML
+  Rendering beaches/index.html.erb within layouts/application
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  ↳ app/views/beaches/index.html.erb:4
+  Rendered beaches/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 5845)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 126ms (Views: 108.6ms | ActiveRecord: 0.9ms | Allocations: 31639)
+
+
+Started GET "/beaches/12" for ::1 at 2020-11-03 16:47:21 -0500
+Processing by BeachesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:7:in `show'
+  Rendering beaches/show.html.erb within layouts/application
+  Rendered beaches/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 828)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 6090)
+
+
+Started GET "/beaches/12/edit" for ::1 at 2020-11-03 16:47:23 -0500
+Processing by BeachesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:26:in `edit'
+  Rendering beaches/edit.html.erb within layouts/application
+  Rendered beaches/edit.html.erb within layouts/application (Duration: 160.6ms | Allocations: 199266)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 169ms (Views: 166.3ms | ActiveRecord: 0.1ms | Allocations: 204094)
+
+
+Started PATCH "/beaches/12" for ::1 at 2020-11-03 16:47:26 -0500
+Processing by BeachesController#update as JS
+  Parameters: {"authenticity_token"=>"VkOq/p6YqxcYlIPHzknviVoHlABhsGrf7EaHRkjA2qZRH/2QyUiEAm9uuIAw90kOCbgtWU64FO2zp2qOCkEBjw==", "beach"=>{"name"=>"Miami Beach", "location"=>"New Coralie", "open"=>"true"}, "commit"=>"Update Beach", "id"=>"12"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:30:in `update'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms | Allocations: 4486)
+
+
+  
+NoMethodError (undefined method `boolean_field_name' for #<Beach:0x00007fec3ebd49f8>):
+  
+app/controllers/beaches_controller.rb:31:in `update'
+Started PATCH "/beaches/12" for ::1 at 2020-11-03 16:47:28 -0500
+Processing by BeachesController#update as JS
+  Parameters: {"authenticity_token"=>"VkOq/p6YqxcYlIPHzknviVoHlABhsGrf7EaHRkjA2qZRH/2QyUiEAm9uuIAw90kOCbgtWU64FO2zp2qOCkEBjw==", "beach"=>{"name"=>"Miami Beach", "location"=>"New Coralie", "open"=>"true"}, "commit"=>"Update Beach", "id"=>"12"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:30:in `update'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms | Allocations: 4260)
+
+
+  
+NoMethodError (undefined method `boolean_field_name' for #<Beach:0x00007fec38ebea20>):
+  
+app/controllers/beaches_controller.rb:31:in `update'
+Started GET "/beaches/12/edit" for ::1 at 2020-11-03 16:48:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BeachesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:26:in `edit'
+  Rendering beaches/edit.html.erb within layouts/application
+  Rendered beaches/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1126)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 11805)
+
+
+Started PATCH "/beaches/12" for ::1 at 2020-11-03 16:48:41 -0500
+Processing by BeachesController#update as JS
+  Parameters: {"authenticity_token"=>"MyYqhcA5reDs0Gyd9eiJHyryqwmtkdoTuQeSUEGPHNnZ97FQtmupTLXr8knJc6eeo4+YW/971ghO2QDOE/4dlQ==", "beach"=>{"name"=>"Miami Beach", "location"=>"New Coralie", "open"=>"true"}, "commit"=>"Update Beach", "id"=>"12"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:30:in `update'
+Redirected to http://localhost:3000/beaches/12
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms | Allocations: 2349)
+
+
+Started GET "/beaches/12" for ::1 at 2020-11-03 16:48:41 -0500
+Processing by BeachesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:7:in `show'
+  Rendering beaches/show.html.erb within layouts/application
+  Rendered beaches/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 632)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms | Allocations: 5302)
+
+
+Started GET "/beaches/12/edit" for ::1 at 2020-11-03 16:48:46 -0500
+Processing by BeachesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:26:in `edit'
+  Rendering beaches/edit.html.erb within layouts/application
+  Rendered beaches/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1053)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 5727)
+
+
+Started PATCH "/beaches/12" for ::1 at 2020-11-03 16:48:48 -0500
+Processing by BeachesController#update as JS
+  Parameters: {"authenticity_token"=>"xo8ErDbUKFWnHB/Hw1bnYXS5BBqrh9A9Cb41ZXAiM0zB01PCYQQHQNDmJIA96EHmJwa9Q4SPrg9WX9itMqPoZQ==", "beach"=>{"name"=>"Miami Beach", "location"=>"New Coralie", "open"=>"true"}, "commit"=>"Update Beach", "id"=>"12"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:30:in `update'
+Redirected to http://localhost:3000/beaches/12
+Completed 200 OK in 3ms (ActiveRecord: 0.1ms | Allocations: 2295)
+
+
+Started GET "/beaches/12" for ::1 at 2020-11-03 16:48:48 -0500
+Processing by BeachesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:7:in `show'
+  Rendering beaches/show.html.erb within layouts/application
+  Rendered beaches/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 4859)
+
+
+Started GET "/beaches" for ::1 at 2020-11-03 16:48:49 -0500
+Processing by BeachesController#index as HTML
+  Rendering beaches/index.html.erb within layouts/application
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  ↳ app/views/beaches/index.html.erb:4
+  Rendered beaches/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 937)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 5078)
+
+
+Started GET "/beaches/new" for ::1 at 2020-11-03 16:48:50 -0500
+Processing by BeachesController#new as HTML
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered beaches/_beach_form.html.erb (Duration: 1.4ms | Allocations: 1724)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2038)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2733)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/erickvilleda/Flatiron/Phase2Labs/second_week/m2m_with_validations/sandytrails/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+    1: <%= render partial: "/shared/error_list", locals: {new_object: @beach} %>
+    2: 
+    3: 
+    4: <%= form_for @beach do |f|%>
+  
+app/views/beaches/_beach_form.html.erb:1
+app/views/beaches/new.html.erb:3
+Started GET "/beaches/new" for ::1 at 2020-11-03 16:49:27 -0500
+Processing by BeachesController#new as HTML
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered beaches/_beach_form.html.erb (Duration: 1.7ms | Allocations: 1714)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2013)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3303)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/erickvilleda/Flatiron/Phase2Labs/second_week/m2m_with_validations/sandytrails/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+    1: <%= render partial: "shared/error_list", locals: {new_object: @beach} %>
+    2: 
+    3: 
+    4: <%= form_for @beach do |f|%>
+  
+app/views/beaches/_beach_form.html.erb:1
+app/views/beaches/new.html.erb:3
+Started GET "/beaches/new" for ::1 at 2020-11-03 16:49:36 -0500
+Processing by BeachesController#new as HTML
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered beaches/_beach_form.html.erb (Duration: 1.3ms | Allocations: 1715)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2014)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3304)
+
+
+  
+ActionView::Template::Error (Missing partial shared/__error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/erickvilleda/Flatiron/Phase2Labs/second_week/m2m_with_validations/sandytrails/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+    1: <%= render partial: "shared/_error_list", locals: {new_object: @beach} %>
+    2: 
+    3: 
+    4: <%= form_for @beach do |f|%>
+  
+app/views/beaches/_beach_form.html.erb:1
+app/views/beaches/new.html.erb:3
+Started GET "/beaches/new" for ::1 at 2020-11-03 16:49:37 -0500
+Processing by BeachesController#new as HTML
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered beaches/_beach_form.html.erb (Duration: 0.4ms | Allocations: 1166)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1234)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1783)
+
+
+  
+ActionView::Template::Error (Missing partial shared/__error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/erickvilleda/Flatiron/Phase2Labs/second_week/m2m_with_validations/sandytrails/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+    1: <%= render partial: "shared/_error_list", locals: {new_object: @beach} %>
+    2: 
+    3: 
+    4: <%= form_for @beach do |f|%>
+  
+app/views/beaches/_beach_form.html.erb:1
+app/views/beaches/new.html.erb:3
+Started GET "/beaches/new" for ::1 at 2020-11-03 16:49:42 -0500
+Processing by BeachesController#new as HTML
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered beaches/_beach_form.html.erb (Duration: 1.1ms | Allocations: 1714)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2013)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3303)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_error_list with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/erickvilleda/Flatiron/Phase2Labs/second_week/m2m_with_validations/sandytrails/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/erickvilleda/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+    1: <%= render partial: "shared/error_list", locals: {new_object: @beach} %>
+    2: 
+    3: 
+    4: <%= form_for @beach do |f|%>
+  
+app/views/beaches/_beach_form.html.erb:1
+app/views/beaches/new.html.erb:3
+Started GET "/beaches/new" for ::1 at 2020-11-03 17:01:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BeachesController#new as HTML
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered beaches/_beach_form.html.erb (Duration: 2.3ms | Allocations: 1628)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1924)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6991)
+
+
+Started POST "/beaches" for ::1 at 2020-11-03 17:01:48 -0500
+Processing by BeachesController#create as HTML
+  Parameters: {"authenticity_token"=>"TprR0m7LM4p1Y1BDizIvMymnZqjuaGK51xlsqPD+AlakS0oHGJk3JixYzpe3qQGyoNpV+ryCbqIgx/42oo8DGg==", "beach"=>{"name"=>"Goggle Beach", "location"=>"GHTFG", "open"=>"true"}, "commit"=>"Create Beach"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  [1m[36mBeach Create (0.7ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Goggle Beach"], ["location", "GHTFG"], ["open", 1], ["created_at", "2020-11-03 22:01:48.950414"], ["updated_at", "2020-11-03 22:01:48.950414"]]
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (Duration: 0.2ms | Allocations: 146)
+  Rendered beaches/_beach_form.html.erb (Duration: 2.6ms | Allocations: 1176)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1241)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 1.5ms | Allocations: 8334)
+
+
+Started POST "/beaches" for ::1 at 2020-11-03 17:02:09 -0500
+Processing by BeachesController#create as HTML
+  Parameters: {"authenticity_token"=>"U/f3g8k6+Ej19aic+D7b1YkyTh5cyn8zgoFix9LR3ey5JmxWv2j85KzONkjEpfVUAE99TA4gcyh1X/BZgKDcoA==", "beach"=>{"name"=>"Something Beach", "location"=>"THRYGS", "open"=>"true"}, "commit"=>"Create Beach"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  [1m[36mBeach Create (0.3ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Something Beach"], ["location", "THRYGS"], ["open", 1], ["created_at", "2020-11-03 22:02:09.833765"], ["updated_at", "2020-11-03 22:02:09.833765"]]
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered beaches/_beach_form.html.erb (Duration: 2.0ms | Allocations: 1163)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 1.0ms | Allocations: 8121)
+
+
+Started POST "/beaches" for ::1 at 2020-11-03 17:02:16 -0500
+Processing by BeachesController#create as HTML
+  Parameters: {"authenticity_token"=>"pUTP6wPic/Qk3kFU/80X2/IjZmFqiOXp3dK6W/BaiVpPlVQ+dbB3WH3l34DDVjlae15VMzhi6fIqDCjFoiuIFg==", "beach"=>{"name"=>"", "location"=>"jnfnjnc", "open"=>"true"}, "commit"=>"Create Beach"}
+  Rendering beaches/new.html.erb within layouts/application
+  Rendered shared/_error_list.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered beaches/_beach_form.html.erb (Duration: 2.3ms | Allocations: 1163)
+  Rendered beaches/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 6581)
+
+
+Started POST "/beaches" for ::1 at 2020-11-03 17:04:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BeachesController#create as HTML
+  Parameters: {"authenticity_token"=>"jh2d854ca6Y4lH35VklO5ZBZGL9AuDqcqnQ2psJRZPRkzAYm6E5vCmGv4y1q0mBkGSQr7RJSNoddqqQ4kCBluA==", "beach"=>{"name"=>"Goggle Beach", "location"=>"GHTFG", "open"=>"true"}, "commit"=>"Create Beach"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  [1m[36mBeach Create (0.3ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Goggle Beach"], ["location", "GHTFG"], ["open", 1], ["created_at", "2020-11-03 22:04:11.705341"], ["updated_at", "2020-11-03 22:04:11.705341"]]
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/beaches_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/beaches_controller.rb:14:in `create'
+  [1m[36mBeach Create (0.4ms)[0m  [1m[32mINSERT INTO "beaches" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-11-03 22:04:11.708928"], ["updated_at", "2020-11-03 22:04:11.708928"]]
+  ↳ app/controllers/beaches_controller.rb:14:in `create'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/beaches_controller.rb:14:in `create'
+Redirected to http://localhost:3000/beaches/23
+Completed 302 Found in 26ms (ActiveRecord: 3.6ms | Allocations: 10827)
+
+
+Started GET "/beaches/23" for ::1 at 2020-11-03 17:04:11 -0500
+Processing by BeachesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:7:in `show'
+  Rendering beaches/show.html.erb within layouts/application
+  Rendered beaches/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 805)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 5902)
+
+
+Started GET "/beaches" for ::1 at 2020-11-03 17:04:17 -0500
+Processing by BeachesController#index as HTML
+  Rendering beaches/index.html.erb within layouts/application
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  ↳ app/views/beaches/index.html.erb:4
+  Rendered beaches/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1256)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 5542)
+
+
+Started GET "/beaches/23" for ::1 at 2020-11-03 17:04:27 -0500
+Processing by BeachesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:7:in `show'
+  Rendering beaches/show.html.erb within layouts/application
+  Rendered beaches/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 4856)
+
+
+Started DELETE "/beaches/23" for ::1 at 2020-11-03 17:04:29 -0500
+Processing by BeachesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"slVxV6yt5x2NmPg7etp+58cMbQx+Y2WZmYGeJb3Ha/lYhOqC2v/jsdSjZu9GQVBmTnFeXiyJaYJuXwy777ZqtQ==", "id"=>"23"}
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/beaches_controller.rb:36:in `destroy'
+  [1m[36mBeach Destroy (1.8ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/beaches_controller.rb:37:in `destroy'
+Redirected to http://localhost:3000/beaches
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms | Allocations: 1424)
+
+
+Started GET "/beaches" for ::1 at 2020-11-03 17:04:29 -0500
+Processing by BeachesController#index as HTML
+  Rendering beaches/index.html.erb within layouts/application
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  ↳ app/views/beaches/index.html.erb:4
+  Rendered beaches/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 5172)
+
+
