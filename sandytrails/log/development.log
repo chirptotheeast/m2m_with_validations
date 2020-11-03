@@ -68,3 +68,385 @@ Migrating to CreateTrips (20201103160725)
   [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" INNER JOIN "trips" ON "beaches"."id" = "trips"."beach_id" WHERE "trips"."visitor_id" = ? LIMIT ?[0m  [["visitor_id", 1], ["LIMIT", 11]]
   [1m[36mVisitor Load (0.6ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" INNER JOIN "trips" ON "visitors"."id" = "trips"."visitor_id" WHERE "trips"."beach_id" = ? LIMIT ?[0m  [["beach_id", 1], ["LIMIT", 11]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (1.0ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Red Box Woman"], ["age", 23], ["city", "Lake Jessiville"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:47:18.259490"], ["updated_at", "2020-11-03 17:47:18.259490"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dark Wolverine"], ["age", 15], ["city", "Harveyville"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:47:18.266601"], ["updated_at", "2020-11-03 17:47:18.266601"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Agent White Queen Lord"], ["age", 48], ["city", "North Romonaton"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:47:18.273932"], ["updated_at", "2020-11-03 17:47:18.273932"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.5ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dark Monarch"], ["age", 50], ["city", "Kochtown"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:47:18.279688"], ["updated_at", "2020-11-03 17:47:18.279688"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.6ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "General Joker XI"], ["age", 22], ["city", "Slyviahaven"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:47:18.289238"], ["updated_at", "2020-11-03 17:47:18.289238"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.3ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Captain Ant Strange"], ["age", 41], ["city", "Lake Kelvin"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:47:18.294938"], ["updated_at", "2020-11-03 17:47:18.294938"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mr Blink the Hunter"], ["age", 41], ["city", "Lake Wendolyn"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:47:18.299373"], ["updated_at", "2020-11-03 17:47:18.299373"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.7ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Doctor Hawk Lord"], ["age", 33], ["city", "Schmidtstad"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:47:18.303305"], ["updated_at", "2020-11-03 17:47:18.303305"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.5ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daredevil"], ["age", 50], ["city", "Kurtistown"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:47:18.309593"], ["updated_at", "2020-11-03 17:47:18.309593"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.3ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Scarecrow Strange"], ["age", 35], ["city", "East Rayford"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:47:18.314160"], ["updated_at", "2020-11-03 17:47:18.314160"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (3.5ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Miami Beach"], ["location", "South Keishashire"], ["open", 1], ["created_at", "2020-11-03 17:47:18.326737"], ["updated_at", "2020-11-03 17:47:18.326737"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.3ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Siesta Key"], ["location", "New Allyn"], ["open", 0], ["created_at", "2020-11-03 17:47:18.335898"], ["updated_at", "2020-11-03 17:47:18.335898"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.7ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Myrtle Beach"], ["location", "Galeland"], ["open", 0], ["created_at", "2020-11-03 17:47:18.341031"], ["updated_at", "2020-11-03 17:47:18.341031"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.6ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ocean City"], ["location", "Kunzefurt"], ["open", 0], ["created_at", "2020-11-03 17:47:18.348530"], ["updated_at", "2020-11-03 17:47:18.348530"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (1.5ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rehobeth Beach"], ["location", "Rayfordfort"], ["open", 1], ["created_at", "2020-11-03 17:47:18.355480"], ["updated_at", "2020-11-03 17:47:18.355480"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.8ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.5ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Star-Lord Girl"], ["age", 59], ["city", "New Cary"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:48:24.780868"], ["updated_at", "2020-11-03 17:48:24.780868"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.3ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Firebird Man"], ["age", 47], ["city", "South Basil"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:48:24.785745"], ["updated_at", "2020-11-03 17:48:24.785745"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.5ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "The Arachne Woman"], ["age", 48], ["city", "Marlinfurt"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:48:24.789885"], ["updated_at", "2020-11-03 17:48:24.789885"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.3ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Goku"], ["age", 22], ["city", "New Fay"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:48:24.794675"], ["updated_at", "2020-11-03 17:48:24.794675"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.3ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Captain Watcher Skull"], ["age", 41], ["city", "Kentonview"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:48:24.799135"], ["updated_at", "2020-11-03 17:48:24.799135"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.5ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Supah Titan"], ["age", 31], ["city", "Schambergerside"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:48:24.803888"], ["updated_at", "2020-11-03 17:48:24.803888"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.3ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Penance Machine"], ["age", 23], ["city", "Wolfmouth"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:48:24.810371"], ["updated_at", "2020-11-03 17:48:24.810371"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Metallo"], ["age", 56], ["city", "East Eleonorborough"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:48:24.815071"], ["updated_at", "2020-11-03 17:48:24.815071"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.6ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Polaris Thirteen"], ["age", 28], ["city", "Lake Coltonport"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:48:24.820580"], ["updated_at", "2020-11-03 17:48:24.820580"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (12.8ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Thunderbird"], ["age", 19], ["city", "North Brady"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:48:24.827334"], ["updated_at", "2020-11-03 17:48:24.827334"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.6ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Miami Beach"], ["location", "Torifurt"], ["open", 0], ["created_at", "2020-11-03 17:48:24.853514"], ["updated_at", "2020-11-03 17:48:24.853514"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.5ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Siesta Key"], ["location", "West Orvalburgh"], ["open", 1], ["created_at", "2020-11-03 17:48:24.858191"], ["updated_at", "2020-11-03 17:48:24.858191"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.6ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Myrtle Beach"], ["location", "North Cristina"], ["open", 0], ["created_at", "2020-11-03 17:48:24.863043"], ["updated_at", "2020-11-03 17:48:24.863043"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.4ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ocean City"], ["location", "Dorothahaven"], ["open", 0], ["created_at", "2020-11-03 17:48:24.868628"], ["updated_at", "2020-11-03 17:48:24.868628"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.3ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rehobeth Beach"], ["location", "Collinsborough"], ["open", 0], ["created_at", "2020-11-03 17:48:24.873863"], ["updated_at", "2020-11-03 17:48:24.873863"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 10], ["visitor_id", 10], ["created_at", "2020-11-03 17:48:24.913624"], ["updated_at", "2020-11-03 17:48:24.913624"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.0ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 7], ["visitor_id", 6], ["created_at", "2020-11-03 17:48:24.922337"], ["updated_at", "2020-11-03 17:48:24.922337"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.3ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 8], ["visitor_id", 3], ["created_at", "2020-11-03 17:48:24.930985"], ["updated_at", "2020-11-03 17:48:24.930985"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.0ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.4ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 5], ["visitor_id", 11], ["created_at", "2020-11-03 17:48:24.938704"], ["updated_at", "2020-11-03 17:48:24.938704"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.0ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 10], ["visitor_id", 12], ["created_at", "2020-11-03 17:48:24.949114"], ["updated_at", "2020-11-03 17:48:24.949114"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mBeach Load (0.3ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" ORDER BY "visitors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" INNER JOIN "trips" ON "beaches"."id" = "trips"."beach_id" WHERE "trips"."visitor_id" = ? LIMIT ?[0m  [["visitor_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (1.2ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (1.1ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 13]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.5ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.6ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 18]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 19]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.4ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 20]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Destroy (0.3ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.3ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.4ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.3ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (19.2ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.4ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (1.9ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (1.6ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.5ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.4ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.5ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 10]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Destroy (0.7ms)[0m  [1m[31mDELETE FROM "beaches" WHERE "beaches"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Destroy (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Destroy (0.4ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Destroy (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Destroy (0.4ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Destroy (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTrip Destroy (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rocket Raccoon Dragon"], ["age", 36], ["city", "Jessemouth"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.523830"], ["updated_at", "2020-11-03 17:54:45.523830"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.5ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "War Machine"], ["age", 58], ["city", "Teresaton"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.530173"], ["updated_at", "2020-11-03 17:54:45.530173"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.7ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Giant Havok"], ["age", 29], ["city", "Chadbury"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.535464"], ["updated_at", "2020-11-03 17:54:45.535464"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.5ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Supah Mogo Machine"], ["age", 26], ["city", "Xaviermouth"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.545644"], ["updated_at", "2020-11-03 17:54:45.545644"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Trickster"], ["age", 45], ["city", "North Napoleonside"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.553908"], ["updated_at", "2020-11-03 17:54:45.553908"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.6ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "General Fixer"], ["age", 28], ["city", "East Salenabury"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.559764"], ["updated_at", "2020-11-03 17:54:45.559764"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "The Mephisto the Hunter"], ["age", 42], ["city", "South Lloydberg"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:54:45.565967"], ["updated_at", "2020-11-03 17:54:45.565967"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Supah Meltdown"], ["age", 25], ["city", "Lake Patrina"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.570343"], ["updated_at", "2020-11-03 17:54:45.570343"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.3ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Violet the Hunter"], ["age", 49], ["city", "Balistrerichester"], ["mermaid_descendant", 0], ["created_at", "2020-11-03 17:54:45.574906"], ["updated_at", "2020-11-03 17:54:45.574906"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mVisitor Create (0.4ms)[0m  [1m[32mINSERT INTO "visitors" ("name", "age", "city", "mermaid_descendant", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Quicksilver X"], ["age", 51], ["city", "Schadenside"], ["mermaid_descendant", 1], ["created_at", "2020-11-03 17:54:45.578661"], ["updated_at", "2020-11-03 17:54:45.578661"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.3ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Miami Beach"], ["location", "New Coralie"], ["open", 0], ["created_at", "2020-11-03 17:54:45.583087"], ["updated_at", "2020-11-03 17:54:45.583087"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.4ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Siesta Key"], ["location", "New Quentinstad"], ["open", 0], ["created_at", "2020-11-03 17:54:45.587806"], ["updated_at", "2020-11-03 17:54:45.587806"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.8ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Myrtle Beach"], ["location", "New Elbertborough"], ["open", 0], ["created_at", "2020-11-03 17:54:45.591815"], ["updated_at", "2020-11-03 17:54:45.591815"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (1.0ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ocean City"], ["location", "Sharronburgh"], ["open", 1], ["created_at", "2020-11-03 17:54:45.599386"], ["updated_at", "2020-11-03 17:54:45.599386"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Create (0.6ms)[0m  [1m[32mINSERT INTO "beaches" ("name", "location", "open", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rehobeth Beach"], ["location", "North Brooketown"], ["open", 1], ["created_at", "2020-11-03 17:54:45.605364"], ["updated_at", "2020-11-03 17:54:45.605364"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mTrip Create (1.9ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 12], ["visitor_id", 30], ["created_at", "2020-11-03 17:54:45.626350"], ["updated_at", "2020-11-03 17:54:45.626350"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.4ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 15], ["visitor_id", 31], ["created_at", "2020-11-03 17:54:45.639178"], ["updated_at", "2020-11-03 17:54:45.639178"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.2ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 12], ["visitor_id", 31], ["created_at", "2020-11-03 17:54:45.653997"], ["updated_at", "2020-11-03 17:54:45.653997"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.0ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.3ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 14], ["visitor_id", 25], ["created_at", "2020-11-03 17:54:45.662745"], ["updated_at", "2020-11-03 17:54:45.662745"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mVisitor Load (0.1ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBeach Load (0.1ms)[0m  [1m[34mSELECT "beaches".* FROM "beaches" WHERE "beaches"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mVisitor Load (0.0ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors" WHERE "visitors"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[36mTrip Create (0.4ms)[0m  [1m[32mINSERT INTO "trips" ("beach_id", "visitor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["beach_id", 13], ["visitor_id", 29], ["created_at", "2020-11-03 17:54:45.670469"], ["updated_at", "2020-11-03 17:54:45.670469"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-11-03 11:59:33 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 367)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/alyssaeasterly/Flatiron/code/m2m_with_validations/sandytrails/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 2879ms
+Built at: 11/03/2020 11:59:39 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 5785ms (Views: 5771.0ms | ActiveRecord: 0.0ms | Allocations: 27653)
+
+
+Started GET "/about" for ::1 at 2020-11-03 11:59:44 -0600
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 4345)
+
+
+Started GET "/" for ::1 at 2020-11-03 12:01:05 -0600
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 5115)
+
+
