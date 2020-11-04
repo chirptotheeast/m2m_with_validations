@@ -1,2 +1,15 @@
-<h1>Visitors#show</h1>
-<p>Find me in app/views/visitors/show.html.erb</p>
+<h1>Visitors Details</h1>
+
+<ul>
+    <li><%= @visitor.name%></li>
+    <li><%= @visitor.city%></li>
+    <li><%= @visitor.age%></li>
+    <li><%= @visitor.mermaid_descendant%></li>
+<% @visitor.trips.each do |trip|%>
+    <li><%= trip.id %></li>
+<% end %>
+</ul>
+
+<%= link_to 'Go Back To Index', visitors_path%>
+<%= link_to 'Edit Info', edit_visitor_path%>
+<%= button_to 'Destroy', @visitor, :method => :delete%>

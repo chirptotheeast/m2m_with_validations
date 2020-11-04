@@ -1,6 +1,12 @@
 class BeachesController < ApplicationController
   def index
+    if params[:open] == "true"
+      @page_title = "Open Beaches"
+      @beaches = Beach.open
+    else
+    @page_title = "Lifes A Beach"
     @beaches = Beach.all
+    end
   end
 
   def show
@@ -42,6 +48,12 @@ class BeachesController < ApplicationController
     @beach_to_delete.delete
     redirect_to beaches_path
   end
+
+  # def open
+  #   @page_title = "Open Beaches"
+  #   @open = Beach.open
+  #   render :index
+  # end
 
   def beach_params
     params.require(:beach).permit(:name, :location, :open)

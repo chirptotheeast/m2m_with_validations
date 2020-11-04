@@ -6,7 +6,9 @@ class Beach < ApplicationRecord
     validates :name, presence: true
     validates :location, length: {maximum: 10}
 
-    
+    def self.open
+        return Beach.where(open: true)
+    end
 end
 
 

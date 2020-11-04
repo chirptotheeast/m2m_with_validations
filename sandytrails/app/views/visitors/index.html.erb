@@ -1,2 +1,7 @@
-<h1>Visitors#index</h1>
-<p>Find me in app/views/visitors/index.html.erb</p>
+<h1>Visitors</h1>
+
+<% @visitors.each do |v|%>
+    <div><%=link_to v.name, visitor_path(v.id)%></div>
+<%end%><br>
+
+<div><%= link_to 'Add Visitor', new_visitor_path%></div>
