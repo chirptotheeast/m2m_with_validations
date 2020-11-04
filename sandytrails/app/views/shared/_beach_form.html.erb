@@ -1,4 +1,6 @@
+
 <%= render partial: "shared/error_list", locals: {new_object: @beach} %>
+
 
 
 <%= form_for @beach do |f|%>
@@ -12,6 +14,6 @@
     <%= f.select :open, [true, false]%><br>
 
     <%= f.submit %>
-    <%= link_to 'Take Me Back', beaches_path%>
 <% end%>
 
+ <%= link_to 'Take Me Back', beaches_path%>

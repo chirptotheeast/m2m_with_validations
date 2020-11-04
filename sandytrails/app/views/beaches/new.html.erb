@@ -1,3 +1,4 @@
 <h1>Add A Beach!</h1>
 
-<%= render partial: "beach_form"%>
+<%= render "shared/beach_form", locals: {new_object: @beach} %>
+

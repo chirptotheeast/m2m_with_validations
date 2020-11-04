@@ -8,13 +8,13 @@ class BeachesController < ApplicationController
   end
 
   def create
-    @beach = Beach.create(beach_params)
-    @beach = Beach.new
+    #byebug
+    @beach = Beach.new(beach_params)
     if @beach.valid? 
       @beach.save
       redirect_to beach_path(@beach.id)
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -27,9 +27,14 @@ class BeachesController < ApplicationController
   end
 
   def update
+    #byebug
     @beach = Beach.find(params[:id])
     @beach.update(beach_params)
-    redirect_to beach_path(@beach.id)
+    if @beach.valid?
+      redirect_to beach_path(@beach.id)
+    else
+      render :edit
+    end
   end
 
   def destroy

@@ -3,7 +3,7 @@ class Beach < ApplicationRecord
     has_many :trips
     has_many :visitors, through: :trips
 
-    # validates :name, presence: true
+    validates :name, presence: true
     validates :location, length: {maximum: 10}
 
     

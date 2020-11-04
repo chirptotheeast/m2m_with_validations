@@ -3,13 +3,4 @@
 
 
 
-<%=form_with method: :patch, model: @beach do |f|%>
-    <%= f.label :name%>
-    <%= f.text_field :name%>
-    <%= f.label :location%>
-    <%= f.text_field :location%>
-    <%= f.label :open%>
-    <%= f.select :open, [true, false]%>
-    <%= f.submit%>
-    <%= link_to 'Nevermind!', beach_path%>
-<% end %>
+<%= render "shared/beach_form", locals: {new_object: @beach} %> 
